@@ -3,7 +3,7 @@
 window.__debugLayout = false;
 
 var React = require('react/addons'),
-    {Layout, resizeMixin, Spacer} = require('../src/index'),
+    {Layout, ResizeMixin, Spacer} = require('../src/index'),
     Simple = require('./Simple'),
     LongChild = require('./LongChild'),
     BasicLayoutTest = require('./BasicLayoutTest');
@@ -63,7 +63,7 @@ var Root = React.createClass({
 });
 
 var App = React.createClass({
-    mixins: [resizeMixin],
+    mixins: [ResizeMixin],
     getInitialState() {
         return { current: "root" };
     },
@@ -94,7 +94,7 @@ var App = React.createClass({
         }
         return (
             /* The root instance needs a fixes height and width */
-            <Layout calculatedWidth={window.innerWidth} calculatedHeight={window.innerHeight}>
+            <Layout width={window.innerWidth} height={window.innerHeight}>
                 {show}
             </Layout>
         );

@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react/addons'),
-    {Layout, resizeMixin} = require('../src/index.jsx');
+    {Layout, ResizeMixin} = require('../src/index.jsx');
 
 var color = c => ({ backgroundColor: c});
 
@@ -25,11 +25,11 @@ var App = React.createClass({
 });
 
 var Root = React.createClass({
-    mixins: [resizeMixin],
+    mixins: [ResizeMixin],
     render() {
         return (
             /* The root instance needs a fixes height and width */
-            <Layout calculatedWidth={window.innerWidth} calculatedHeight={window.innerHeight}>
+            <Layout width={window.innerWidth} height={window.innerHeight}>
                 <Layout style={color("#FFEFD6")}>
                     Header, fills the remaining space.
                 </Layout>

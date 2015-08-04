@@ -49,7 +49,7 @@
 	window.__debugLayout = false;
 
 	var React = __webpack_require__(11),
-	    $__0=    __webpack_require__(4),Layout=$__0.Layout,resizeMixin=$__0.resizeMixin,Spacer=$__0.Spacer,
+	    $__0=    __webpack_require__(4),Layout=$__0.Layout,ResizeMixin=$__0.ResizeMixin,Spacer=$__0.Spacer,
 	    Simple = __webpack_require__(1),
 	    LongChild = __webpack_require__(2),
 	    BasicLayoutTest = __webpack_require__(3);
@@ -109,7 +109,7 @@
 	});
 
 	var App = React.createClass({displayName: "App",
-	    mixins: [resizeMixin],
+	    mixins: [ResizeMixin],
 	    getInitialState:function() {
 	        return { current: "root" };
 	    },
@@ -140,7 +140,7 @@
 	        }
 	        return (
 	            /* The root instance needs a fixes height and width */
-	            React.createElement(Layout, {calculatedWidth: window.innerWidth, calculatedHeight: window.innerHeight}, 
+	            React.createElement(Layout, {width: window.innerWidth, height: window.innerHeight},
 	                show
 	            )
 	        );
@@ -282,7 +282,7 @@
 
 	'use strict';
 
-	var resizeMixin = {
+	var ResizeMixin = {
 	    resize:function() {
 	        this.forceUpdate();
 	    },
@@ -296,7 +296,7 @@
 
 	module.exports = {
 	    Layout: __webpack_require__(12),
-	    resizeMixin: resizeMixin,
+	    ResizeMixin: ResizeMixin,
 	    Center: __webpack_require__(13),
 	    CenterHorizontal: __webpack_require__(14),
 	    CenterVertical: __webpack_require__(15),
@@ -667,8 +667,8 @@
 	            debugger;
 	        }
 	        var orientation = this.props.orientation,
-	            width = this.props.calculatedWidth,
-	            height = this.props.calculatedHeight,
+	            width = this.props.width,
+	            height = this.props.height,
 	            left = this.props.calculatedLeft || 0,
 	            top = this.props.calculatedTop || 0;
 	        var isVertical = orientation === "vertical";
@@ -759,8 +759,8 @@
 	                    childW = window.innerWidth;
 	                }
 	                var newProps = {
-	                    calculatedWidth: childW,
-	                    calculatedHeight: childH,
+	                    width: childW,
+	                    height: childH,
 	                    calculatedTop: newTop,
 	                    calculatedLeft: newLeft,
 	                    key: c.props.key || i,

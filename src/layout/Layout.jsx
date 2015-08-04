@@ -85,8 +85,8 @@ var Layout = React.createClass({
             debugger;
         }
         var orientation = this.props.orientation,
-            width = this.props.calculatedWidth,
-            height = this.props.calculatedHeight,
+            width = this.props.width,
+            height = this.props.height,
             left = this.props.calculatedLeft || 0,
             top = this.props.calculatedTop || 0;
         var isVertical = orientation === "vertical";
@@ -177,8 +177,8 @@ var Layout = React.createClass({
                     childW = window.innerWidth;
                 }
                 var newProps = {
-                    calculatedWidth: childW,
-                    calculatedHeight: childH,
+                    width: childW,
+                    height: childH,
                     calculatedTop: newTop,
                     calculatedLeft: newLeft,
                     key: c.props.key || i,

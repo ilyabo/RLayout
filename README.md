@@ -25,14 +25,14 @@ Check out the [examples](examples)!
 
 Require the needed modules (only pick the ones you need):
 ```JS
-var {Layout, resizeMixin, Spacer, Center, CenterHorizontal, CenterVertical} = require('r-layout');
+var {Layout, ResizeMixin, Spacer, Center, CenterHorizontal, CenterVertical} = require('r-layout');
 ```
 The base component is the `<Layout/>` component.
 
 Simple helper components are available, such as:
 `<Spacer/>, <Center/>, <CenterHorizontal/> and <CenterVertical/>`
 
-There is a `resizeMixin` available which automatically updates the layout on page resize.
+There is a `ResizeMixin` available which automatically updates the layout on page resize.
 Use it only on the root element.
 
 ## Concepts
@@ -47,7 +47,7 @@ A child inside a Layout will always fill one dimension completely, leaving the o
 "use strict";
 
 var React = require('react/addons'),
-    {Layout, resizeMixin} = require('r-layout');
+    {Layout, ResizeMixin} = require('r-layout');
 
 var color = c => ({ backgroundColor: c});
 
@@ -71,11 +71,11 @@ var App = React.createClass({
 });
 
 var Root = React.createClass({
-    mixins: [resizeMixin],
+    mixins: [ResizeMixin],
     render() {
         return (
             /* The root instance needs a fixes height and width */
-            <Layout calculatedWidth={window.innerWidth} calculatedHeight={window.innerHeight}>
+            <Layout width={window.innerWidth} height={window.innerHeight}>
                 <Layout style={color("#FFEFD6")}>
                     Header, fills the remaining space.
                 </Layout>
@@ -135,12 +135,12 @@ The most important component. Everything else is composed out of `<Layout/>` com
 => *Default:* `"vertical"`
  
 
-**calculatedWidth:** Only the root Layout must specify this value.  
+**width:** Only the root Layout must specify this value.  
     For the top element use: `window.innerWidth`.  
     Everywhere else just pass along the parent values: `{...this.props}`.  
-    If you need more control you can also directly pass along these values: `this.props.calculatedWidth`  
+    If you need more control you can also directly pass along these values: `this.props.width`  
 
-**calculatedHeight:** Same as above, replace Width with Height.
+**height:** Same as above, replace Width with Height.
 
 **absolute:** Indicate that this element doesn't takes any space up for others.
     The element will be positioned exactly like it's parent. Good when things need to be over something else.

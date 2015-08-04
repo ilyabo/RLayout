@@ -47,7 +47,7 @@
 	"use strict";
 
 	var React = __webpack_require__(11),
-	    $__0=   __webpack_require__(4),Layout=$__0.Layout,resizeMixin=$__0.resizeMixin;
+	    $__0=   __webpack_require__(4),Layout=$__0.Layout,ResizeMixin=$__0.ResizeMixin;
 
 	var color = function(c)  {return { backgroundColor: c};};
 
@@ -71,11 +71,11 @@
 	});
 
 	var Root = React.createClass({displayName: "Root",
-	    mixins: [resizeMixin],
+	    mixins: [ResizeMixin],
 	    render:function() {
 	        return (
 	            /* The root instance needs a fixes height and width */
-	            React.createElement(Layout, {calculatedWidth: window.innerWidth, calculatedHeight: window.innerHeight}, 
+	            React.createElement(Layout, {width: window.innerWidth, height: window.innerHeight},
 	                React.createElement(Layout, {style: color("#FFEFD6")}, 
 	                    "Header, fills the remaining space."
 	                ), 
@@ -100,7 +100,7 @@
 
 	'use strict';
 
-	var resizeMixin = {
+	var ResizeMixin = {
 	    resize:function() {
 	        this.forceUpdate();
 	    },
@@ -114,7 +114,7 @@
 
 	module.exports = {
 	    Layout: __webpack_require__(12),
-	    resizeMixin: resizeMixin,
+	    ResizeMixin: ResizeMixin,
 	    Center: __webpack_require__(13),
 	    CenterHorizontal: __webpack_require__(14),
 	    CenterVertical: __webpack_require__(15),
@@ -225,8 +225,8 @@
 	            debugger;
 	        }
 	        var orientation = this.props.orientation,
-	            width = this.props.calculatedWidth,
-	            height = this.props.calculatedHeight,
+	            width = this.props.width,
+	            height = this.props.height,
 	            left = this.props.calculatedLeft || 0,
 	            top = this.props.calculatedTop || 0;
 	        var isVertical = orientation === "vertical";
@@ -317,8 +317,8 @@
 	                    childW = window.innerWidth;
 	                }
 	                var newProps = {
-	                    calculatedWidth: childW,
-	                    calculatedHeight: childH,
+	                    width: childW,
+	                    height: childH,
 	                    calculatedTop: newTop,
 	                    calculatedLeft: newLeft,
 	                    key: c.props.key || i,

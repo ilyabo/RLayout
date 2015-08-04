@@ -1,6 +1,6 @@
 'use strict';
 
-var resizeMixin = {
+var ResizeMixin = {
     resize() {
         this.forceUpdate();
     },
@@ -14,7 +14,7 @@ var resizeMixin = {
 
 module.exports = {
     Layout: require('./layout/Layout'),
-    resizeMixin: resizeMixin,
+    ResizeMixin: ResizeMixin,
     Center: require('./layout/Center'),
     CenterHorizontal: require('./layout/CenterHorizontal'),
     CenterVertical: require('./layout/CenterVertical'),
