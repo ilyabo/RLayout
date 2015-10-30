@@ -1,6 +1,6 @@
 "use strict";
 
-var React = require('react/addons'),
+var React = require('react'),
     {Layout} = require('../src/index');
 
 var BasicLayoutTest = React.createClass({

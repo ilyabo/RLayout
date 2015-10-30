@@ -1,6 +1,7 @@
 "use strict";
 
-var React = require('react/addons'),
+var React = require('react'),
+    ReactDOM = require('react-dom'),
     {Layout, ResizeMixin} = require('../src/index.jsx');
 
 var color = c => ({ backgroundColor: c});
@@ -43,4 +44,4 @@ var Root = React.createClass({
     }
 });
 
-React.render(<Root />, document.querySelector('body'));
+ReactDOM.render(<Root />, document.querySelector('#root'));

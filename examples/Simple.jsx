@@ -1,6 +1,6 @@
 "use strict";
 
-var React = require('react/addons'),
+var React = require('react'),
     {Layout, Center, CenterHorizontal, CenterVertical} = require('../src/index');
 
 var Simple = React.createClass({

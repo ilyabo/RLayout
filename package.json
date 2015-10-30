@@ -1,6 +1,6 @@
 {
   "name": "r-layout",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "author": "Florian Zinggeler",
   "description": "Layout made simple. Screw CSS!",
   "main": "./src/index.jsx",
@@ -19,13 +19,16 @@
     "url": "https://github.com/Zinggi/RLayout"
   },
   "devDependencies": {
-    "react": "^0.12.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-react": "^0.10.0",
     "grunt-webpack": "^1.0.8",
     "jsx-loader": "^0.12.2",
+    "react": "^0.14.1",
+    "react-addons-perf": "^0.14.1",
+    "react-addons-pure-render-mixin": "^0.14.1",
+    "react-dom": "^0.14.1",
     "webpack": "^1.4.13",
     "webpack-dev-server": "^1.6.6"
   },

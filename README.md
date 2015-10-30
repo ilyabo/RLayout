@@ -46,7 +46,7 @@ A child inside a Layout will always fill one dimension completely, leaving the o
 ```JS
 "use strict";
 
-var React = require('react/addons'),
+var React = require('react'),
     {Layout, ResizeMixin} = require('r-layout');
 
 var color = c => ({ backgroundColor: c});
@@ -262,6 +262,7 @@ First time, run:
 `npm install`  
 After that, Just run:  
 `grunt dev`
+`open ./DemoExample.html`
 
 ---
 ## Also try this

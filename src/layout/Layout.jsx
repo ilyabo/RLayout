@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react/addons');
+var React = require('react');
 var {toArray} = require('./childrenUtilies');
 require('./objectAssign');
 
@@ -195,7 +195,7 @@ var Layout = React.createClass({
                     // In the meanwhile, return the original and hope that nobody passes a ref to a Layout tag...
                     return c;
                 }
-                return React.addons.cloneWithProps(c, newProps);
+                return React.cloneElement(c, newProps);
             }
             return c;
         });

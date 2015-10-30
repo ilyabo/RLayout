@@ -1,7 +1,8 @@
 "use strict";
 
-var React = require('react/addons'),
-	{Perf, PureRenderMixin} = React.addons,
+var React = require('react'),
+   Perf = require('react-addons-perf'),
+	PureRenderMixin = require('react-addons-pure-render-mixin'),
     {Layout, Center} = require('../../src/index');
 
 var PerformanceTest = React.createClass({

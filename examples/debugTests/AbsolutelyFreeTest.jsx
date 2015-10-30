@@ -1,6 +1,6 @@
 "use strict";
 
-var React = require('react/addons'),
+var React = require('react'),
     {Layout, Center, Spacer} = require('../../src/index');
 
 var AbsolutelyFreeTest = React.createClass({

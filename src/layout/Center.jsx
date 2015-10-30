@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react/addons');
+var React = require('react');
 var CenterHorizontal = require('./CenterHorizontal');
 var CenterVertical = require('./CenterVertical');
 

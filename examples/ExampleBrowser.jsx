@@ -2,7 +2,8 @@
 
 window.__debugLayout = false;
 
-var React = require('react/addons'),
+var React = require('react'),
+    ReactDOM = require('react-dom'),
     {Layout, ResizeMixin, Spacer} = require('../src/index'),
     Simple = require('./Simple'),
     LongChild = require('./LongChild'),
@@ -101,4 +102,4 @@ var App = React.createClass({
     }
 });
 
-React.render(<App />, document.querySelector('body'));
+ReactDOM.render(<App />, document.querySelector('#root'));
