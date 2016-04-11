@@ -181,7 +181,7 @@ var Layout = React.createClass({
                     height: childH,
                     calculatedTop: newTop,
                     calculatedLeft: newLeft,
-                    key: c.props.key || i,
+                    key: i,
                 };
                 currentPosition += size;
                 var debug = c.props.debug || this.props.debug,
